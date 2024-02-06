@@ -41,3 +41,64 @@
     border-bottom-right-radius: 5px;
 }
 
+/* Logo.module.css */
+.logo-container {
+    display: flex;
+    align-items: center;
+    margin-left: 20px; /* Adjust the left gap */
+  }
+  
+  .logo {
+    height: 40px;
+    /* Add other styling properties as needed */
+  }
+
+  /* SearchBar.module.css */
+.search-bar {
+    display: flex;
+    align-items: center;
+    /* Add other styling properties as needed */
+  }
+  
+  .search-bar input {
+    width: 300px;
+    height: 35px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+  }
+  
+  .search-bar button {
+    height: 40px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    cursor: pointer;
+    /* Add other styling properties as needed */
+  }
+  
+
+  /* FeedbackButton.module.css */
+.feedback-button {
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    border-radius: 10px;
+    background-color: lightgreen;
+    color: rgb(52,201,75);
+    /* Add other styling properties as needed */
+  }
+  
+  .feedback-button:hover {
+    background-color: greenyellow; /* Change background color on hover */
+    color: rgb(52,201,75); /* Change text color on hover */
+    border: 2px solid greenyellow; /* Add border on hover */
+    /* Add any other hover styles you want */
+  }
+
+  /* Navbar.module.css */
+.navbar {
+    display: flex;
+    height: 64px;
+    background-color: rgb(52, 201, 75);
+    justify-content: space-between;
+    align-items: center;
+    /* Add other styling properties as needed */
+  }
