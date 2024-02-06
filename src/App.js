@@ -5,6 +5,7 @@ import Section from './cardsection/Section';
 import Cardview from './cardsection/Cardview';
 import CustomCard from './CustomCard';
 import GridComponents from './GridComponents';
+import NewAlbum from './NewAlbum';
 
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
       <Hero />
       {/* <Section /> */}
       <GridComponents />
+      <NewAlbum />
     </div>
   );
 }
