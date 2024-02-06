@@ -1,0 +1,26 @@
+/* Hero.module.css */
+.hero {
+  /* height: 212px;
+  width: 799px; */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--black-color); /* Use CSS variable for background color */
+    color: #fff; /* Text color */
+    /* padding: 50px; */
+    /* text-align: center; */
+  }
+  
+  .image {
+    max-width: 212px; 
+    max-height: 212px;
+    /* margin-bottom: 20px; */
+  }
+  
+  .text {
+    font-size: 24px;
+    margin: 0 20px;
+    /* margin-bottom: 10px; */
+  }
+  
