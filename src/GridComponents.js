@@ -75,7 +75,7 @@ function GridComponents() {
               style={{ color: "rgb(52, 201, 75)", cursor: "pointer" }}
               onClick={() => setCollapsed(!collapsed)}
             >
-              {collapsed ? "Show more" : "Collapse"}
+              {collapsed ? "Show All" : "Collapse"}
             </p>
           </div>
   
