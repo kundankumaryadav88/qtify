@@ -9,8 +9,8 @@
 
 .navbar img{
     height: 40px;
-    width: 80px;
-    margin: 20px;
+    width: 80p;
+    margin-left: 20px;
 }
 
 .navbar > button:hover {
