@@ -3,17 +3,17 @@ import axios from "axios";
 import Grid from "@mui/material/Grid";
 import CustomCard from "./CustomCard";
 import 'react-horizontal-scrolling-menu/dist/styles.css';
-import "./App.css";
+import "../App.css";
 import CarouselSec from "./CarouselSec";
 
 
-function GridComponents() {
+function NewAlbum() {
     const [albums, setAlbums] = useState([]);
     const [collapsed, setCollapsed] = useState(false);
   
     useEffect(() => {
       axios
-        .get("https://qtify-backend-labs.crio.do/albums/top")
+        .get("https://qtify-backend-labs.crio.do/albums/new")
         .then((response) => {
           setAlbums(response.data);
         })
@@ -21,7 +21,6 @@ function GridComponents() {
           console.error("Error fetching albums:", error);
         });
     }, []);
-  console.log(albums);
     return (
       <div style={{backgroundColor: "black"}}>
           <div
@@ -42,7 +41,7 @@ function GridComponents() {
                 lineHeight: "30px",
               }}
             >
-              Top Albums
+              New Albums
             </p>
             <p
               style={{ color: "rgb(52, 201, 75)", cursor: "pointer" }}
@@ -77,4 +76,4 @@ function GridComponents() {
   }
   
 
-export default GridComponents;
+export default NewAlbum;
