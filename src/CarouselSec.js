@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -13,7 +13,6 @@ function CarouselSec({ albums }) {
     slidesToScroll: 1,
   };
 
-  // console.log(children);
 
   return (
     <div style={{width: "95%"}}>
