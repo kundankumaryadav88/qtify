@@ -55,7 +55,6 @@ function SongPage() {
         <div
           style={{
             width: "100%",
-            backgroundColor: "black",
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
@@ -70,19 +69,27 @@ function SongPage() {
   return (
     <div>
       <div className="songs" style={{ backgroundColor: "black" }}>
-        <p
-          style={{
-            color: "white",
-            fontFamily: "Poppins",
-            fontWeight: 600,
-            fontSize: "20px",
-            // lineHeight: "30px",
-            paddingLeft: "20px",
-            textAlign: "left",
-          }}
-        >
-          Songs
-        </p>
+      <div
+            style={{
+                padding: "20px",
+              display: "flex",
+              justifyContent: "space-between",
+              alignItems: "center",
+            }}
+          >
+            <p
+              style={{
+                color: "white",
+                fontFamily: "Poppins",
+                fontWeight: 600,
+                fontSize: "20px",
+                lineHeight: "30px",
+              }}
+            >
+              Songs
+            </p>
+            <p></p>
+          </div>
         <TabContext value={value}>
           <Tabs
             value={value}
