@@ -6,10 +6,9 @@ import Typography from "@mui/material/Typography";
 import { CardActionArea } from "@mui/material";
 import Chip from "@mui/material/Chip";
 
-// import "./App.css"
 
 function CustomCard({ children }) {
-  console.log(children);
+  const label = children.follows ? `${children.follows} follows` : `${children.likes} likes`;
   return (
    <div style={{padding: "10px"}}>
 
@@ -39,7 +38,7 @@ function CustomCard({ children }) {
           }}
         >
           <Chip
-            label={children.follows + " follows"}
+            label={label}
             style={{ backgroundColor: "black", color: "white" }}
           />
         </CardContent>

@@ -1,8 +1,9 @@
 import './App.css';
 import Hero from './herosection/Hero';
 import Navbar from './navbar/Navbar';
-import GridComponents from './GridComponents';
-import NewAlbum from './NewAlbum';
+import GridComponents from './contentArea/GridComponents';
+import NewAlbum from './contentArea/NewAlbum';
+import SongPage from './contentArea/SongPage';
 
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
       <Hero />
       <GridComponents />
       <NewAlbum />
+      <SongPage />
     </div>
   );
 }
