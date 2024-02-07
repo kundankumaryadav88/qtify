@@ -6,6 +6,7 @@ import Navbar from './navbar/Navbar';
 // import CustomCard from './CustomCard';
 import GridComponents from './GridComponents';
 import NewAlbum from './NewAlbum';
+import SwiperComponents from './CarouselSec';
 
 
 function App() {
@@ -13,7 +14,6 @@ function App() {
     <div className="App">
       <Navbar />
       <Hero />
-      {/* <Section /> */}
       <GridComponents />
       <NewAlbum />
     </div>

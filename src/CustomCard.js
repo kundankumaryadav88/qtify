@@ -11,7 +11,7 @@ import Chip from "@mui/material/Chip";
 function CustomCard({ children }) {
   console.log(children);
   return (
-   <div style={{padding: "1px"}}>
+   <div style={{padding: "10px"}}>
 
      <Card
       style={{
@@ -19,7 +19,6 @@ function CustomCard({ children }) {
         justifyContent: "center",
         alignItems: "center",
         height: "232px",
-        width: "160px",
         borderRadius: "10px",
       }}
     >

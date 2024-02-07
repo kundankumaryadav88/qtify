@@ -1,39 +1,11 @@
 import React, { useEffect, useState } from "react";
-import Box from "@mui/material/Box";
 import axios from "axios";
 import Grid from "@mui/material/Grid";
 import CustomCard from "./CustomCard";
-import { ScrollMenu, VisibilityContext } from 'react-horizontal-scrolling-menu';
 import 'react-horizontal-scrolling-menu/dist/styles.css';
 import "./App.css";
+import CarouselSec from "./CarouselSec";
 
-function Arrow({ disabled, onClick, children }) {
-  return (
-    <button disabled={disabled} onClick={onClick}>
-      {children}
-    </button>
-  );
-}
-
-function LeftArrow() {
-  const { isFirstItemVisible, scrollPrev } = React.useContext(VisibilityContext);
-
-  return (
-    <Arrow disabled={isFirstItemVisible} onClick={() => scrollPrev()}>
-      Left
-    </Arrow>
-  );
-}
-
-function RightArrow() {
-  const { isLastItemVisible, scrollNext } = React.useContext(VisibilityContext);
-
-  return (
-    <Arrow disabled={isLastItemVisible} onClick={() => scrollNext()}>
-      Right
-    </Arrow>
-  );
-}
 
 function GridComponents() {
     const [albums, setAlbums] = useState([]);
@@ -49,15 +21,16 @@ function GridComponents() {
           console.error("Error fetching albums:", error);
         });
     }, []);
-  
+  console.log(albums);
     return (
-      <div className="grid-container">
-        <Box sx={{ flexGrow: 1 }}>
+      <div style={{backgroundColor: "black"}}>
           <div
             style={{
+                padding: "20px",
               display: "flex",
               justifyContent: "space-between",
               alignItems: "center",
+            //   backgroundColor: "black",
             }}
           >
             <p
@@ -75,41 +48,30 @@ function GridComponents() {
               style={{ color: "rgb(52, 201, 75)", cursor: "pointer" }}
               onClick={() => setCollapsed(!collapsed)}
             >
-              {collapsed ? "Show All" : "Collapse"}
+              {collapsed ?   "Collapse":"Show All"}
             </p>
           </div>
   
-          {collapsed ? (
-            <ScrollMenu LeftArrow={LeftArrow} RightArrow={RightArrow} style={{ width: '100vw' }}>
-              {albums.map((album) => (
-                <div key={album.id} style={{ marginRight: '10px' }}>
-                  <CustomCard children={album} />
-                </div>
-              ))}
-            </ScrollMenu>
+          {!collapsed ? (
+            <div style={{width: "100%", backgroundColor: "black" , display: "flex", justifyContent: "center", alignItems: "center"}}>
+                <CarouselSec albums={albums} />
+            </div>
           ) : (
             <Grid
               container
-              spacing={{ xs: 2, md: 2 }}
-              columns={{ xs: 12, sm: 10, md: 12 }}
+            spacing={1}
+            style={{ paddingLeft:"20px"}}
             >
               {albums.map((album) => (
                 <Grid
                   item
                   key={album.id}
-                  className="grid-item"
-                  style={{
-                    display: "flex",
-                    justifyContent: "center",
-                    alignItems: "center",
-                  }}
                 >
                   <CustomCard key={album.id} children={album} />
                 </Grid>
               ))}
             </Grid>
           )}
-        </Box>
       </div>
     );
   }
